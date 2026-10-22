@@ -178,6 +178,18 @@ The desktop half is a single uncompiled ESM file — edit `desktop/plugin.js` an
 
 ---
 
+## Disclosure (catalog rule 13)
+
+What a user should know before installing:
+
+- **No network calls.** The plugin makes no requests to any third-party service. All data stays local.
+- **Reads `state.db`.** The plugin reads and (on destructive actions) writes the Hermes session store (`$HERMES_HOME/state.db`) through `SessionDB`. This is the plugin's core purpose.
+- **Writes backups.** Safety backups are written to `$HERMES_HOME/backups/` (up to ~2× the db size). The archive profile db is created at `$HERMES_HOME/profiles/archive/state.db`.
+- **Shell commands.** On a forced restore, the plugin runs `hermes gateway stop` to release the db lock. No other shell commands are spawned.
+- **Long-running background process.** A daemon thread runs every 5 seconds to auto-purge soft-deleted sessions (only in 30s undo mode).
+- **No credentials.** The plugin does not read, store, or transmit any secrets, tokens, or auth data.
+- **Telemetry.** None.
+
 ## License
 
 MIT
