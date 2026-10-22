@@ -1,0 +1,19 @@
+name: session-minder
+repo: https://github.com/rahlquist/session-minder
+sha: ad49cd70a8c5edfe94ad89e18f0fda796331399c
+description: Browse, search, sort, archive, and purge Hermes sessions from a desktop UI, with safety backups and restore.
+maintainer: rahlquist
+tier: community
+category: desktop
+requires_hermes: ">=0.21.5"
+version: "0.1.0"
+title: "Session Minder"
+platforms: []
+readme: true
+screenshots: []
+capabilities:
+  provides_tools: []
+  provides_hooks: []
+  provides_middleware: []
+  requires_env: []
+known_issues: []
