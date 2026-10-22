@@ -1,0 +1,11 @@
+{
+  "name": "session-minder",
+  "label": "Session Minder",
+  "description": "Browse, search, sort, archive, and purge Hermes sessions",
+  "icon": "Library",
+  "version": "0.1.0",
+  "tab": { "path": "/session-minder", "position": "after:sessions" },
+  "slots": [],
+  "entry": "plugin.js",
+  "api": "plugin_api.py"
+}

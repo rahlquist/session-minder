@@ -1,0 +1,11 @@
+name: session-minder
+label: Session Minder
+kind: standalone
+version: 0.1.0
+author: rahlquist
+description: >-
+  Browse, search, sort, archive, and purge Hermes sessions from a desktop UI.
+  Backs up state.db before destructive changes.
+requires_hermes: ">=0.21.5"
+provides_tools: []
+provides_hooks: []
